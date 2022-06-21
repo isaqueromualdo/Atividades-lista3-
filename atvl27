@@ -1,0 +1,38 @@
+/*O número 3025 possui a seguinte característica:
+30 + 25 = 55
+55² = 3025
+Fazer um algoritmo que dado um número de 4 dígitos calcule e escreva se este número possui
+ou não tal característica.*/
+
+#include<math.h>
+#include<stdio.h>
+#include<string.h>
+
+int main(){
+
+int numero, n1, n2, n3, n4, aux, primeira, segunda, soma, calculo;
+
+    scanf("%d",&numero);
+
+n1 = numero / 1000;
+aux = numero % 1000;
+n2 = aux / 100;
+aux = aux % 100;
+n3 = aux / 10;
+n4 = aux % 10;
+
+primeira = (n1 * 10 ) + n2;
+segunda = (n3 * 10 ) + n4;
+soma = primeira + segunda;
+calculo = pow(soma,2);
+
+if (calculo == numero){
+printf("O NUMERO POSSUI TAL CARACTERISTICA\n");
+}
+
+else {
+printf("O NUMERO NAO POSSUI TAL CARACTERISTICA\n");
+}
+
+return 0;
+}
