@@ -1,0 +1,28 @@
+/*Números quadrados perfeitos são aqueles cuja raiz quadrada é um número inteiro. Fazer
+um algoritmo que dado um número inteiro positivo, calcule se ele é ou não um quadrado perfeito.*/
+
+#include<math.h>
+#include<stdio.h>
+#include<string.h>
+
+int main()
+{
+int numero, verificaint;
+float verificar, intoufloat;
+
+scanf("%d",&numero);
+
+verificar = sqrt(numero);
+verificaint = verificar;
+intoufloat = verificar - verificaint;
+
+    if (intoufloat == 0){
+        printf("E QUADRADO PERFEITO\n");
+    }
+
+    else {
+        printf("NAO E QUADRADO PERFEITO\n");
+    }
+
+return 0;
+}
